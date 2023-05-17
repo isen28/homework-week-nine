@@ -29,7 +29,7 @@ function generateReadMe({
     
     ## License
     
-    ${licenseContent(license)}
+    Covered by: ${license}
     
     ## How to Contribute
     
@@ -102,7 +102,7 @@ function init() {
         {
             type: 'input',
             name: 'license',
-            message: 'Choose __ as a license:',
+            message: 'Choose either Apache License 2.0, GNU General Public License v3.0, or MIT License:',
         },
         {
             type: 'input',
