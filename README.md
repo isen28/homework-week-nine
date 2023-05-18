@@ -1,40 +1,20 @@
 
-# Testing [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# Homework Week 9
 ## Description
-    
-Testin
-## Table of Contents
-    
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contribute](#how-to-contribute)
-- [Tests](#tests)
-- [Questions](#questions)
-    
+
+This program creates a README to the specifications of the user.
+
 ## Installation
-    
-Testi
+
+Clone the Homework Week 9 from GitHub. Have node.js installed on your computer and open the file in Visual Sutdio Code.
     
 ## Usage
     
-Test
-    
-    
-## License
-    
-Covered by: Apache License 2.0
-    
-## How to Contribute
-    
-Tes
-    
-## Tests
-    
-Te
+Run the 'node index.js' command in the terminal. You will then be given a series of prompts. Respond to each prompt with the information you want to be in your README.
+Once all the prompts are complete the README file will be generated.
+
+A video tutorial can be found [here](https://watch.screencastify.com/v/DEoq6iVGNj0MSnB25Zzr)
     
 ## Questions
     
 My GitHub: [isen28](https://github.com/isen28)
-    
-Contact: t
