@@ -1,8 +1,8 @@
-// TODO: Include packages needed for this application
+//Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
+//Generates the README text
 function generateReadMe({
     title, description, install, usage, contribution, test, license, gitHub, email}) {
     return `# ${title}
@@ -45,16 +45,14 @@ function generateReadMe({
     
     Contact: ${email}`
 }
-// TODO: Create an array of questions for user input
-const questions = [];
 
-// TODO: Create a function to write README file
+// Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(`${fileName}.md`, data, (err) =>
       err ? console.log(err) : console.log(`Successfully created ${fileName}.md!`)
     );
 }
-
+// Provides a badge depending on the license
 function licenseBadge(license) {
     if (license === 'Apache License 2.0') {
         return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
@@ -67,8 +65,9 @@ function licenseBadge(license) {
     }
 }
 
-// TODO: Create a function to initialize app
+// Create a function to initialize app
 function init() {
+    // Question prompts to be used
     inquirer
       .prompt([
         {
@@ -117,6 +116,7 @@ function init() {
             message: 'what is your email?',
         },
       ])
+      // Generates the README file
       .then((answers) => {
         const readMeContent = generateReadMe(answers);
         writeToFile('README', readMeContent);
