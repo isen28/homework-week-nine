@@ -5,8 +5,8 @@ const fs = require('fs');
 
 function generateReadMe({
     title, description, install, usage, contribution, test, license, gitHub, email}) {
-    `# ${title} ${licenseBadge(license)}
-
+    return `# ${title}
+    ${licenseBadge(license)}
     ## Description
     
     ${description}
@@ -41,7 +41,7 @@ function generateReadMe({
     
     ## Questions
     
-    My GitHub: ${gitHub}
+    My GitHub: [${gitHub}](https://github.com/${gitHub})
     
     Contact: ${email}`
 }
@@ -55,14 +55,16 @@ function writeToFile(fileName, data) {
     );
 }
 
-function licenseContent(license) {
-    if (license === 'MIT') {
-        return ""
-    }
-}
-
 function licenseBadge(license) {
-
+    if (license === 'Apache License 2.0') {
+        return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+    }
+    if (license === 'GNU General Public License v3.0') {
+        return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+    }
+    if (license === 'MIT License') {
+        return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+    }
 }
 
 // TODO: Create a function to initialize app
