@@ -5,45 +5,46 @@ const fs = require('fs');
 //Generates the README text
 function generateReadMe({
     title, description, install, usage, contribution, test, license, gitHub, email}) {
-    return `# ${title}
-    ${licenseBadge(license)}
-    ## Description
+    return `
+# ${title} ${licenseBadge(license)}
+## Description
     
-    ${description}
+${description}
+## Table of Contents
     
-    ## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contribute](#how-to-contribute)
+- [Tests](#tests)
+- [Questions](#questions)
     
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
+## Installation
     
-    ## Installation
+${install}
     
-    ${install}
+## Usage
     
-    ## Usage
-    
-    ${usage}
+${usage}
     
     
-    ## License
+## License
     
-    Covered by: ${license}
+Covered by: ${license}
     
-    ## How to Contribute
+## How to Contribute
     
-    ${contribution}
+${contribution}
     
-    ## Tests
+## Tests
     
-    ${test}
+${test}
     
-    ## Questions
+## Questions
     
-    My GitHub: [${gitHub}](https://github.com/${gitHub})
+My GitHub: [${gitHub}](https://github.com/${gitHub})
     
-    Contact: ${email}`
+Contact: ${email}`
 }
 
 // Create a function to write README file
@@ -113,7 +114,7 @@ function init() {
         {
             type: 'input',
             name: 'email',
-            message: 'what is your email?',
+            message: 'What is your email?',
         },
       ])
       // Generates the README file
